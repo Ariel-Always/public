@@ -1,0 +1,1 @@
+该代码的使用的时候必须得先引用jQuery和jQuery cookie（有需要的话）

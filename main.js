@@ -227,4 +227,12 @@ if (typeof Array.prototype.forEach != "function") {									//forEach兼容IE
 	    return previous;
 	  };
 	}
+	
+	var getGlobal = function () {
+		  if (typeof self !== 'undefined') { return self; }
+		  if (typeof window !== 'undefined') { return window; }			//在不同的环境里面返回顶层对象，最后复制给getGlobal的函数
+		  if (typeof global !== 'undefined') { return global; }
+		  throw new Error('unable to locate global object');
+		};
+	
 
